@@ -19,7 +19,7 @@ with Connection.open_serial_port("/dev/ttyACM0") as connection:
     device_list = connection.detect_devices()
     print("Found {} devices".format(len(device_list)))
     device = device_list[0]
-    axis = device.get_axis(1)
+    axis = device.get_axis(1) 
     
     def move():
         axis.generic_command("driver enable") 	# Clears all the warning flags and enables the driver. 
